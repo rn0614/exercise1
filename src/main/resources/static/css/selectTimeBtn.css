@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'BinggraeMelona-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRunOTF-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container{
+	width: 360px;
+	margin: 0 auto;
+}
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-align: center;
+}
+.breakfastBtn {
+	background: #232530;
+	color: #FDF0ED;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;  
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 2px;
+}
+.lunchBtn {
+	background: #232530;
+	color: #FDF0ED;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;  
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 2px;
+}
+.dinnerBtn {
+	background: #232530;
+	color: #FDF0ED;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;  
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 2px;
+}
+.nightBtn {
+	background: #232530;
+	color: #FDF0ED;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;  
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 2px;
+}
+.snackBtn {
+	background: #232530;
+	color: #FDF0ED;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;  
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 2px;
+}
+
+
+
+.breakfastBtn.current {
+	background: linear-gradient(#f4e1b7, #d3e9dc);
+	color: #222;
+    margin-bottom: 0px;
+    height: 46px !important;
+}
+.lunchBtn.current {
+	background: linear-gradient(#a8d5ea, #72b4ce);
+	color: #222;
+    margin-bottom: 0px;
+    height: 46px !important;
+}
+.dinnerBtn.current {
+	background: linear-gradient(#dca09f, #af9cbc);
+	color: #222;
+    margin-bottom: 0px;
+    height: 46px !important;
+}
+.nightBtn.current {
+	background: linear-gradient(#66719f, #4a578e);
+	color: #222;
+    margin-bottom: 0px;
+    height: 46px !important;
+}
+.snackBtn.current {
+	background: linear-gradient(#F0A880, #F080A8);
+	color: #222;
+    margin-bottom: 0px;
+    height: 46px !important;
+}
+
+
+.content {
+	width: 350px;
+	height: 760px;  /* 퍼센트로 구현하는 방법 */
+	border: 5px solid #F4F1FD;
+	border-top-color: #232530;
+	/* border-color: #232530; */
+}
