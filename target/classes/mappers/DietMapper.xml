@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.multi.diet.ICalendarDAO">
+
+	<resultMap id="calendarResult" type="com.multi.diet.CalendarVO">
+		<result property="calCode" column="calCode" />
+		<result property="id" column="id" />
+		<result property="fCode" column="fCode" />
+		<result property="eYear" column="eYear" />
+		<result property="eMonth" column="eMonth" />
+		<result property="eDate" column="eDate" />
+		<result property="eAmt" column="eAmt" />
+		<result property="eTime" column="eTime" />
+		<association property="foodVO" javaType="com.multi.diet.FoodVO">
+			<result property="fCode" column="fCode" />
+			<result property="fName" column="fName" />
+			<result property="f_category" column="f_category" />
+			<result property="servings" column="servings" />
+			<result property="kcal" column="kcal" />
+			<result property="kcal_per_100" column="kcal_per_100" />
+		</association> 
+	</resultMap> 
+	
+	<resultMap id="foodResult" type="com.multi.diet.FoodVO">
+		<result property="fCode" column="fCode" />
+		<result property="fName" column="fName" />
+		<result property="f_category" column="f_category" />
+		<result property="servings" column="servings" />
+		<result property="kcal" column="kcal" />
+		<result property="kcal_per_100" column="kcal_per_100" />
+	</resultMap> 
+	
+	
+	<!-- 첫 번째 서브메뉴에서 테이블 조회 -->
+ 	<select id="byDateDietList" resultMap="calendarResult">	  	  	
+		SELECT *
+		  FROM calendar C
+		    INNER JOIN food F
+		      ON C.fCode = F.fCode
+    	  WHERE id=#{condId} 
+		  	AND eYear=#{condYear} 
+		  	AND eMonth=#{condMonth} 
+		  	AND eDate=#{condDate}
+	</select>
+	
+	<!-- 두 번째 서브메뉴에서 테이블 조회 -->
+ 	<select id="byTimeDietList" resultMap="calendarResult">	  	  	
+		SELECT *
+		  FROM calendar C
+		    INNER JOIN food F
+		      ON C.fCode = F.fCode
+    	  WHERE id=#{condId} 
+		  	AND eYear=#{condYear} 
+		  	AND eMonth=#{condMonth} 
+		  	AND eDate=#{condDate}
+		  	AND eTime=#{condTime}
+	</select>
+	
+
+	<!-- FoodVO 삽입 -->
+	<insert id="insertFoodVO" parameterType="com.multi.diet.FoodVO">
+		INSERT INTO food (
+			fCode, fName, f_category, servings, kcal, kcal_per_100
+		) VALUES (
+			#{fCode}, #{fName}, #{f_category}, #{servings}, #{kcal}, #{kcal_per_100} 
+		)
+	</insert>
+	
+	<!-- CalendarVO 삽입 -->
+	<insert id="insertCalendarVO" parameterType="com.multi.diet.CalendarVO">
+		INSERT INTO calendar (
+			calCode, id, fCode, eYear, eMonth, eDate, eAmt, eTime
+		) VALUES (
+			#{calCode}, #{id}, #{fCode}, #{eYear}, #{eMonth}, #{eDate}, #{eAmt}, #{eTime}
+		)
+	</insert>
+	
+	<!-- CalendarVO 삭제 -->
+	<delete id="deleteCalendarVO" parameterType="String">
+		DELETE FROM calendar WHERE calCode=#{calCode}
+	</delete>
+	
+	<!-- 검색 결과 반환 -->
+	<select id="viewSearchResult" resultMap="foodResult">
+		SELECT *
+			FROM food
+			WHERE fName LIKE '%'||#{keyword}||'%'
+	</select>
+
+</mapper>
+ 

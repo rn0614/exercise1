@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+* {
+	vertical-align: middle !important;
+}
+#SearchBox {  /* 검색 구형 div */
+	position: relative;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+#SearchBox input {  /* 검색창*/
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 3px solid #7f888f;
+	width: 250px;
+	font-size: 17px;
+	font-family: 'twayfly';
+}
+
+#glass {
+    position: relative;
+    left: -35px;
+    top: 2.5px;
+    margin: 0;
+    font-size: 22px;
+    width: 0px;
+    color: 7f888f;
+    
+}
+
+
+#SearchBox input:focus {
+	outline: none;
+}
+
+
+.fa-search:hover{
+	cursor: pointer;
+}
+
+/* 동적으로 생성된 FoodVO List */
+#SearchfList th {
+	position: sticky;
+	top: 0px;
+	background-color: #D1CED8 !important;
+}
+
+#SearchfList td {
+	cursor: pointer;
+}
+
+/* 식단으로 보내는 폼 input 속성 */
+
+input#tFoodName {
+    width: 175px;
+    margin: 5px auto;
+    display: inline;
+}
+
+
+input#tFoodAmt {
+    width: 130px;
+    margin: 5px auto;
+    display: inline;
+}
+
+input#insertCalVOBtn{
+	font-family: 'twayfly';
+    width: 250px !important;
+    margin-left: 30px !important;
+    font-size: 15px;
+    padding-left: 35px !important;
+    margin-bottom: 3px !important;
+}

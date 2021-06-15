@@ -1,0 +1,222 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'BinggraeMelona-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRunOTF-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'twayfly';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayfly.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+table, th, td, tr {
+	text-align:center !important;
+}
+
+body {
+  font-family: 'twayfly' !important;
+}
+
+input {
+	  font-family: 'twayfly';
+}
+
+i {
+	font-size: 30px;
+}
+
+label#before, label#next {
+	color: #f56a6a;
+}
+#greetings {
+	color: #BC8F8F !important;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 20px;
+}
+#calendar td {
+	height: 100;
+}
+
+#dayLabels td {
+	color: white;
+}
+
+#before, #next {
+	cursor: pointer;
+}
+
+#calendar {
+/* 	border: 1px solid #BDBDBD; */
+	position: center;
+	text-align: center;
+	width: 30%;
+	padding-top:10px;
+	margin: 0 auto;
+	
+}
+
+	
+td#yearmonth {
+	font-size: 30px;
+}
+
+table tbody tr td {
+	border: 1px solid white;
+	/* background-color: white; */
+}
+
+table#calendar tbody tr td {
+	border: 1px solid white;
+	background-color: white;
+}
+
+
+#dayLabels td {
+	background-color: #f56a6a !important;
+	width: 400px;
+}
+
+.flip-card {
+  display: inline-block;
+  background-color: transparent;
+  width: 125px;
+  height: 125px;
+  perspective: 1000px;
+  /* margin-bottom: 4px; */
+  cursor: pointer;
+  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	background-color: #F9CEC3;
+	color: black;
+	font-size: 10px;
+}
+
+.flip-card-back {
+	background-color: #FA8072;
+	color: white;
+	transform: rotateY(180deg);
+	font-size: 10px;
+}
+
+.flip-card h3 {
+	font-size: 15px;
+}
+#cal {
+	text-align: center;
+}
+
+#month {
+	text-align: center;
+}
+
+.target {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+.menuwrap p {
+	text-align: left;
+}
+
+.wrap {
+	text-align: center;
+}
+
+#monthday {
+	font-size: 30px;
+	font-family: twayfly;
+	text-align: center;
+}
+
+td a {
+	text-decoration: none;
+}
+
+
+/* 아래부터는 권장 칼로리에 마우스 올리면 나오는 툴팁*/
+
+#tooltip div {
+    position: relative;
+    display: inline-block;
+}
+
+#tooltip div span {
+    display: block;
+    padding: 2px 16px;
+    cursor: pointer;
+}
+.arrow_box {
+  display: none;
+  position: absolute;
+  width: 300px;
+  padding: 8px;
+  padding-left: 25px;
+  left: 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;  
+  border-radius: 8px;
+  background: #4B4D59;
+  color: #F08080;
+  font-size: 20px;
+  text-align: left;
+  z-index: 900;
+}
+
+.arrow_box:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+#tooltip div span:hover + p.arrow_box {
+  display: block;
+}

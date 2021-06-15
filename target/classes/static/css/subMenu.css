@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'BinggraeMelona-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRunOTF-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'twayfly';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayfly.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.menuwrap {
+    position: fixed;
+    top: 0;
+    left: -400px; /* 너비 300px 인 사이드바를 왼쪽으로 300px 이동시켜 화면에 보이지 않게 함 */
+    z-index: 400;
+    overflow: auto;
+    width: 400px; /* 너비 */
+    height: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    transition: left .3s ease-in-out; /* 0.3초 동안 이동 애니메이션 */
+    background-color: #F4F1FD;
+}
+
+.textSearchMenuwrap {
+    position: fixed;
+    top: 0;
+    left: -400px; /* 너비 300px 인 사이드바를 왼쪽으로 300px 이동시켜 화면에 보이지 않게 함 */
+    z-index: 390;
+    overflow: auto;
+    width: 400px; /* 너비 */
+    height: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    transition: left .3s ease-in-out; /* 0.3초 동안 이동 애니메이션 */
+    background-color: #F4F1FD;
+}
+
+.OCRSearchMenuwrap {
+    position: fixed;
+    top: 0;
+    left: -400px; /* 너비 300px 인 사이드바를 왼쪽으로 300px 이동시켜 화면에 보이지 않게 함 */
+    z-index: 390;
+    overflow: auto;
+    width: 400px; /* 너비 */
+    height: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    transition: left .3s ease-in-out; /* 0.3초 동안 이동 애니메이션 */
+    background-color: #F4F1FD;
+}
+
+.insertFoodVOwrap {
+    position: fixed;
+    top: 0;
+    left: -400px; /* 너비 300px 인 사이드바를 왼쪽으로 300px 이동시켜 화면에 보이지 않게 함 */
+    z-index: 390;
+    overflow: auto;
+    width: 400px; /* 너비 */
+    height: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    transition: left .3s ease-in-out; /* 0.3초 동안 이동 애니메이션 */
+    background-color: #F4F1FD;
+}
+
+.dataRow {
+	background-color: '#FF69B4 !important';
+}
+
+.on {
+	background-color: '#FF69B4';
+}
+
+.menuwrap.on {
+    left: 0;
+}
+
+.textSearchMenuwrap.on {
+    left: 400px;
+}
+
+.OCRSearchMenuwrap.on {
+    left: 400px;
+}
+
+.insertFoodVOwrap.on {
+    left: 400px;
+}
+#dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+
+#deleteParaphr { /* 삭제 문구 */
+	font-family: 'twayfly';
+	text-align: center;
+	color: #FF69B4;
+}
+
+/* #menu input{
+	margin: 0 auto;	
+	width: 250px;
+	height: 40px;
+	font-size: 20px;
+	margin-bottom: 5mm;
+	padding-top: 1mm;
+	padding-bottom: 3mm;
+	cursor: pointer;
+}
+
+#menu h4 {
+	text-align: left;
+	margin-left: 10px;
+	font-size: 18px;
+}
+
+#menu table {
+	margin-left: 40px;
+}
+ */
+ 
+ 
+ 
+/* 아래부터는 그냥 테스트 나중에 수정해야 됨 */ 
+/* 아래부터는 그냥 테스트 나중에 수정해야 됨 */ 
+/* 아래부터는 그냥 테스트 나중에 수정해야 됨 */ 
+/* 아래부터는 그냥 테스트 나중에 수정해야 됨 */ 
+/* 아래부터는 그냥 테스트 나중에 수정해야 됨 */ 
+
+
+ 
+#dietSearch {
+	position: absolute;
+	top: 700px !important;
+	display: block;
+	margin:0 auto;
+}
+
+
+/* 서브 메뉴 아랫쪽 버튼들 */ 
+#dietSearch input {
+	font-family: 'twayfly';
+	width: 300px !important;
+	margin-left: 30px !important;
+	font-size: 15px;
+	padding-left: 35px !important;
+	margin-bottom: 3px !important;
+}
+
+input#textSearch {
+	
+}
+input#OCRSearch {
+	/* margin-bottom: 20px !important; */
+}
+input#insertFoodBtn {
+	border-color: '#4FBFE8 !impotant';
+	color: '#4FBFE8 !impotant';
+	/* margin-bottom: 20px !important; */
+}
+input#deletDiet {
+	
+}
+
+input#deleteChecker {
+	margin-top: 20px;
+	color: #FF69B4;
+    border-color: #FF69B4;
+    box-shadow: inset 0 0 0 2px #FF69B4;
+    font-size: 18px;
+    border: 2.5px solid;
+}
+
+input#insertDietOCR {
+    font-family: 'twayfly' !important;
+    font-size: 15px;
+	height: 50px;
+	width: 300px;
+}
+
+input#submit {
+    font-family: 'twayfly' !important;
+    font-size: 15px;
+	height: 50px;
+	width: 300px;
+}
+#ocrResultForm input {
+	font-size: 15px;
+}
+
+#ocrResultForm span {
+	font-size: 15px;
+}
+
+input#totalAmount {
+	width: 75px;
+	margin: 5px auto;
+	display: inline;
+}
+input#unitAmount {
+	width: 75px;
+	margin: 5px auto;
+	display: inline;
+}
+input#unitCalories {
+	width: 75px;
+	margin: 5px auto;
+	display: inline;
+	
+}
+input#prodName {
+	width: 150px;
+	margin: 5px auto;
+	display: inline;
+	
+}
+input#intake {
+	width: 150px;
+	margin: 5px auto;
+	display: inline;
+	
+}
+/* input[type="submit"] {
+	font-family: 'twayfly' !important;
+	
+} */
+div#rnxh{
+	display: inline !important;	
+	text-align: left;
+}
+form {
+    margin: 0;
+}
+#OCRSearchMenu {
+	text-align: center !important;
+}
+
+#OCRSearchMenu h3 {
+	font-family: 'twayfly' !important;
+}
+
+#textSearchMenu {
+	text-align: center !important;
+}
+
+#textSearchMenu h3 {
+	font-family: 'twayfly' !important;
+}
+
+#insertFoodVO {
+	text-align: center !important;
+}
+
+#insertFoodVO h3 {
+	font-family: 'twayfly' !important;
+}
+
+ /* insertFoodVOwrap */
+ 
+#foodCateg {
+	height:335px; 
+	font-size: 20px !important;
+	font-family: 'twayfly' !important;
+	padding: 15px;
+	overflow-y: none;
+	overflow : auto;
+}
+
+#insertFoodBtn {
+	font-family: 'twayfly';
+	width: 300px !important;
+	font-size: 15px;
+	padding-left: 35px !important;
+	margin-bottom: 3px !important;
+}
